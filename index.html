@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1 Tasks</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            background-color: #ba1024;
+            color: #333;
+            padding: 40px;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        .box {
+            border: 2px solid #13bc5c;
+            border-radius: 10px;
+            background-color: #13dd90;
+            margin-bottom: 30px;
+            padding: 30px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+            text-align: center;
+        }
+        .box:hover {
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        .box h2,h4 {
+            color: #781a5a;
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+        }
+        .box p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        .box img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .box1 {
+            border: 2px solid #0fa2cf;
+            border-radius: 10px;
+            background-color: #12b8a5;
+            margin-bottom: 30px;
+            padding: 30px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+            text-align: center;
+        }
+        .box1:hover {
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        .box1 h2 {
+            color: #781a5a;
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+        }
+        .box1 p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .box2 {
+            border: 2px solid #ef4f0a;
+            border-radius: 10px;
+            background-color: #d06180;
+            margin-bottom: 30px;
+            padding: 30px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+            text-align: center;
+        }
+        .box2:hover {
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        .box2 h2 {
+            color: #781a5a;
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+        }
+        .box2 p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        .box3 {
+            border: 2px solid #c0dc07;
+            border-radius: 10px;
+            background-color: #edb717;
+            margin-bottom: 30px;
+            padding: 30px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+            text-align: center;
+        }
+        .box3:hover {
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        .box3 h2 {
+            color: #781a5a;
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+        }
+        .box3 p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+       
+        .nav {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+        }
+        .nav-link {
+            color: #459f0d;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .nav-link:hover {
+            background-color: #007bff;
+            color: #af21c8;
+        }
+
+        button {
+            background-color: #e43541;
+            color: #596de0;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin: 10px auto;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-control {
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .calculator input {
+            margin-right: 10px;
+            width: 120px;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 1rem;
+        }
+        .calculator button {
+            padding: 12px 18px;
+            text-align: center;
+        }
+
+        .video-container {
+            text-align: center;
+        }
+        .video-container video {
+            border-radius: 8px;
+            margin-top: 20px;
+            max-width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #888;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .box {
+                padding: 20px;
+            }
+            .nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-link {
+                padding: 8px 15px;
+                font-size: 1rem;
+            }
+            button {
+                width: 100%;
+            }
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image figure {
+            overflow: hidden;
+            border-bottom: 1px solid #e1e1e1;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card-image img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card-content {
+            padding: 20px;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        .media-content .title {
+            color: #3e8ed0;
+            font-weight: bold;
+        }
+
+        .media-content .subtitle {
+            color: #888;
+            margin-top: 5px;
+            font-weight: normal;
+        }
+
+        .content {
+            margin-top: 15px;
+            line-height: 1.6;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .content a {
+            color: #3e8ed0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .card {
+                max-width: 100%;
+                margin: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+     <!-- Task 1: Navigation Menu -->
+     <div class="box">
+        <h2>Navigation Menu</h2>
+        <nav class="nav">
+            <a href="#aboutUs" class="nav-link">About Us</a>
+            <a href="#card" class="nav-link">Card</a>
+            <a href="#contactUs" class="nav-link">Contact</a>
+            <a href="#interactivity" class="nav-link">interactivity</a>
+            <a href="#alert" class="nav-link">Alert</a>
+            <a href="#calculateSum" class="nav-link">Calculator</a>
+            <a href="#video" class="nav-link">Video</a>
+        </nav>
+    </div>
+
+    <div class="container" id="card">
+        <!-- Task 1: Heading, Paragraph, and Image -->
+        <div class="box" id="aboutUs">
+            <h4>About Us</h4>
+            <h2><u><b>Welcome to the Level 1 Tasks Webpage</b></u></h2>
+            <p>This webpage demonstrates HTML, CSS, and JavaScript functionalities for educational purposes. It covers basic web components such as forms, navigation, interactivity, and multimedia.</p>
+            <img src="https://tse2.mm.bing.net/th?id=OIP.e820BVwVW7PVnV8bDM22JAHaKW&pid=Api&P=0&h=180" alt="Sample Image" class="img-fluid rounded">
+        </div>
+        <!-- Task 2: Bulma Card Component -->
+    <div class="card" style="max-width: 320px; margin: 30px auto;">
+        <div class="card-image">
+            <figure class="image is-4by3">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.e820BVwVW7PVnV8bDM22JAHaKW&pid=Api&P=0&h=180" alt="Card Image">
+        </figure>
+    </div>
+    <div class="card-content">
+        <div class="media">
+            <div class="media-content">
+                <p class="title is-4">Bulma Card</p>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            This is a description for the card. It contains additional information about the topic. Learn more <a href="#">here</a>.
+        </div>
+      </div>
+    </div>
+
+        <!-- Task 1: Form -->
+        <div class="box1" id="contactUs">
+            <h2>Contact Us</h2>
+            <form id="simpleForm">
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label">Your Name:</label>
+                    <input type="text" id="nameInput" class="form-control" placeholder="Enter your name">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Task 2: JavaScript Button -->
+        <div class="box2" id="interactivity">
+            <h2>Interactive Button</h2>
+            <button id="colorButton">Click Me</button>
+        </div>
+
+        <!-- Task 2: Alert Box -->
+        <div class="box3" id="alert">
+            <h2>Greeting Alert</h2>
+            <button onclick="showGreeting()">Show Greeting</button>
+        </div>
+
+        <!-- Task 2: Calculator -->
+        <div class="box2" id="calculateSum">
+        <div class="box calculator">
+            <h2>Basic Calculator</h2>
+            <input type="number" id="num1" placeholder="Number 1">
+            <input type="number" id="num2" placeholder="Number 2">
+            <button onclick="calculateSum()">Add</button>
+            <p id="result"></p>
+        </div>
+
+        <!-- Video -->
+        <div class="box3" id="video">
+        <div class="box video-container">
+            <h2>Sample Video</h2>
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+    </div>
+
+    <footer>
+        <p><a href="#">&copy; 2024 Level 1 Tasks Webpage | Privacy Policy</a></p>
+    </footer>
+
+    <script>
+        // JavaScript: Change Button Color
+        document.getElementById('colorButton').addEventListener('click', function() {
+            this.style.backgroundColor = this.style.backgroundColor === 'green' ? '#007bff' : 'green';
+        });
+
+        // JavaScript: Show Greeting Alert
+        function showGreeting() {
+            const hour = new Date().getHours();
+            let greeting;
+            if (hour < 12) {
+                greeting = 'Good Morning!';
+            } else if (hour < 18) {
+                greeting = 'Good Afternoon!';
+            } else if(hour < 24){
+                greeting = 'Good Evening!';
+            }
+            else{
+                greeting = 'Good Night!';
+            }
+            alert(greeting);
+        }
+
+        // JavaScript: Basic Calculator
+        function calculateSum() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('result').textContent = 'Please enter valid numbers.';
+            } else {
+                const sum = num1 + num2;
+                document.getElementById('result').textContent = `The sum is: ${sum}`;
+            }
+        }
+
+        // Focus on the input field when button is clicked
+        document.getElementById('simpleForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted successfully!');
+            // Focus on the input field
+            document.getElementById('nameInput').focus();
+        });
+    </script>
+</body>
+</html>
+
